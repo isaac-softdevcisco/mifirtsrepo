@@ -8,10 +8,6 @@ workflows:
     scripts:
       - name: Build the iOS application
         script: |
-          # Si usas un workspace de Xcode (.xcworkspace):
-          xcodebuild build -workspace TuProyecto.xcworkspace -scheme TuEsquema -destination "generic/platform=iOS Simulator"
-          
-          # O si usas un proyecto simple de Xcode (.xcodeproj):
-          # xcodebuild build -project TuProyecto.xcodeproj -scheme TuEsquema -destination "generic/platform=iOS Simulator"
+          xcodebuild build -project ClimaApp.xcodeproj -scheme ClimaApp -destination "generic/platform=iOS Simulator"
     artifacts:
       - build/ios/ipa/*.ipa
